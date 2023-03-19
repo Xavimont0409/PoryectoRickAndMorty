@@ -1,11 +1,11 @@
 import "./App.css";
-import Cards from "./componentes/Cards";
-import Nav from "./componentes/Nav";
-import About from "./componentes/About";
-import Detail from "./componentes/Detail";
+import Cards from "./components/Cards";
+import Nav from "./components/Nav";
+import About from "./components/About";
+import Detail from "./components/Detail";
 import React, { useEffect, useState } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import From from "./componentes/From";
+import From from "./components/From";
 
 function App() {
   const navigate = useNavigate();
@@ -56,7 +56,7 @@ function App() {
     setCharacters(characters.filter((char) => char.id !== id));
   };
 
-  /* !(location.pathname === "/") ? <Nav onSearch={onSearch} />: navigate("/") */
+  !(location.pathname === "/") ? <Nav onSearch={onSearch} />: navigate("/")
 
   return <div className="App">
     {
